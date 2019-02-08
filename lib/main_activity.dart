@@ -27,13 +27,13 @@ class MainActivityState extends State<MainActivity> {
       appBar: AppBar(
         title: Text(_appBarTitle),
       ),
-      body: Builder(builder: (context) => buildColumn(context)),
+      body: Builder(builder: (context) => buildWidget(context)),
       drawer: buildDrawer(context),
       bottomNavigationBar: buildBottomNavigationBar(),
     );
   }
 
-  Widget buildColumn(BuildContext context) {
+  Widget buildWidget(BuildContext context) {
     switch (_selectedIndex) {
       case 0:
         return Demo1Fragment();
